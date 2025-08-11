@@ -1,0 +1,26 @@
+.button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  gap: .5rem
+
+  padding: .6em 1.2em
+  border: 1px solid transparent
+  border-radius: 8px
+  background: #1a1a1a
+  color: rgba(255,255,255,.92)
+  cursor: pointer
+  transition: border-color .25s, background-color .25s, opacity .2s
+
+  &:hover
+    border-color: #646cff
+
+  &:focus-visible
+    outline: 4px auto -webkit-focus-ring-color
+
+  &--primary
+    background: #646cff
+    color: white
+
+    &:hover
+      background: #535bf2
