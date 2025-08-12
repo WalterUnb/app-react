@@ -1,0 +1,63 @@
+.app
+  min-height: 100dvh
+  display: grid
+  grid-template-rows: auto 1fr auto
+  background: radial-gradient(600px 600px at 100% 45%, rgba(#64F8ED, .55) 20%, rgba(#64F8ED, .28) 45%, rgba(#64F8ED, .12) 55%, rgba(#64F8ED, 0) 65%), radial-gradient(600px 600px at 0% 85%, rgba(#C333FF, .55) 20%, rgba(#C333FF, .28) 45%, rgba(#C333FF, .12) 55%, rgba(#C333FF, 0) 70%), #ffffffff
+  background-attachment: fixed
+
+.photo
+  width: 480px
+  height: 560px
+  border-radius: 45px
+  transform: scaleX(-1)
+  transform-origin: center
+  object-fit: cover
+  object-position: center
+  display: block
+  user-select: none
+  -webkit-user-drag: none
+
+.display
+  display: flex
+  justify-content: end
+
+.display2
+  padding-left: 10rem
+  padding-right: 7rem
+
+.title
+  font-weight: bold
+
+.fondo
+  background: linear-gradient(100deg, #00F4DB 15%, #00FE87 100%)
+  border-radius: 7px
+  padding: 0.5rem 1rem
+  width: 227px
+
+.checkbox
+  color: black
+  border: 1px solid black
+
+.checkbox:checked
+  background-color: black !important
+  color: white !important
+  border-color: black !important
+
+.link
+  font-weight: bold
+  color: black
+  text-decoration: underline
+
+.input
+  border-radius: 30px
+  border-color: black
+  background-color: black
+  color: white
+  font-weight: bold
+  width: 50%
+  height: 60px
+
+.input:hover
+  background-color: #4d4d4d8f
+  border-color: #4d4d4d8f
+  color: white
