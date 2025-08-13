@@ -2,7 +2,7 @@ import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
 import styles from '../components/Home.module.sass'
 import photo from '../assets/images/family.png'
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -29,11 +29,11 @@ export default function Home() {
             <div className={`col-lg-12 col-md-12 col-sm-12 col-12`}>
               <h6>Tú eliges cuánto pagar. Ingresa tus datos, cotiza y <br /> recibe nuestra asesoría. 100% online.</h6>
             </div>
-            <div className={`col-lg-12 col-md-12 col-sm-12 col-12 mt-4`}>
-              <div className="input-group w-100 mb-3">
-                <div className="dropdown w-30">
+            <div className={`col-lg-7 col-md-7 col-sm-12 col-12 mt-4`}>
+              <div className={`input-group w-100 mb-3 ${styles.ancho}`}>
+                <div className="dropdown w-20">
                   <button
-                    className="btn btn-outline-secondary dropdown-toggle w-100"
+                    className={`btn btn-outline-secondary dropdown-toggle ${styles.radius}`}
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -47,18 +47,17 @@ export default function Home() {
                 </div>
                 <input
                   type="text"
-                  className="form-control w-70"
+                  className={`form-control w-80 ${styles.border}`}
                   aria-label="Text input with dropdown button"
                   id="documentInput"
                   placeholder="Nro. de documento"
                 />
-                {/* <label htmlFor="documentInput">Nro. de documento</label> */}
               </div>
             </div>
-            <div className={`col-lg-12 col-md-12 col-sm-12 col-12`}>
+            <div className={`col-lg-7 col-md-7 col-sm-12 col-12`}>
               <input
                   type="text"
-                  className="form-control w-70"
+                  className={`form-control w-70 ${styles.celular}`}
                   aria-label="Text input with dropdown button"
                   id="documentInput"
                   placeholder="Celular"
@@ -75,7 +74,7 @@ export default function Home() {
             <div className={`col-lg-12 col-md-12 col-sm-12 col-12 mt-4`}>
               <div className="form-check">
                 <input className={`form-check-input ${styles.checkbox}`} type="checkbox" value="" id="checkDefault" />
-                <label className="form-check-label" for="checkDefault">
+                <label className="form-check-label" htmlFor="checkDefault">
                   Acepto la Política Comunicaciones Comerciales
                 </label>
               </div>

@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense } from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 const Home = React.lazy(() => import('./components/Home'));

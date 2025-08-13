@@ -1,0 +1,178 @@
+
+:root
+  --clr-text: #141937
+  --clr-muted: #6b7280
+  --clr-border: #e6ecf5
+  --clr-shadow: 0 18px 40px rgba(29, 49, 84, 0.12)
+  --clr-shadow-hover: 0 22px 48px rgba(29, 49, 84, 0.16)
+  --clr-primary: #0d6efd
+  --clr-cta: #ef3658
+  --clr-badge-bg: #daf5e4
+  --clr-badge-border: #27c16f
+
+.page-plans
+  padding: 24px
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"
+  color: var(--clr-text)
+  background: #f5f7fb
+  min-height: 100vh
+
+.page-title
+  font-size: 20px
+  margin: 8px 0 16px
+
+.plans-loading, .plans-error
+  color: var(--clr-muted)
+  padding: 24px
+
+.plans-grid
+  display: flex
+  flex-wrap: wrap
+  gap: 24px
+  justify-content: center  /* centra las columnas */
+  align-items: stretch
+  max-width: 1200px
+  margin-inline: auto
+
+.plan-card
+  background: #fff
+  border-radius: 20px
+  padding: 20px
+  box-shadow: var(--clr-shadow)
+  border: 1px solid transparent
+  display: flex
+  flex-direction: column
+  transition: box-shadow .2s ease, transform .05s ease, border-color .2s ease, background .2s ease
+
+  width: 320px
+  max-width: 100%
+
+  min-height: 560px
+
+  &:hover
+    box-shadow: var(--clr-shadow-hover)
+    transform: translateY(-1px)
+
+  &.is-recommended
+    position: relative
+
+.plan-badge
+  position: static
+  display: inline-flex
+  width: auto
+  max-width: 100%
+  align-self: flex-start
+  white-space: nowrap
+  padding: 4px 8px
+  margin-bottom: 10px
+  border-radius: 6px
+  background: #eaf9ef
+  border: 2px solid var(--clr-badge-border)
+  color: #087f5b
+  font-weight: 700
+  font-size: 12px
+  line-height: 1
+
+/* Header */
+.plan-header
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  margin-bottom: 12px
+
+.plan-title
+  margin: 0
+  font-size: 22px
+  font-weight: 800
+  line-height: 1.25
+  max-width: 80%
+
+.plan-icon
+  width: 40px
+  height: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+
+/* Precios */
+.plan-price
+  .price-label
+    font-size: 12px
+    font-weight: 700
+    letter-spacing: .4px
+    color: #8c93a3
+    text-transform: uppercase
+    margin-bottom: 6px
+
+  .old-price
+    color: #9aa3b2
+    font-size: 14px
+    text-decoration: line-through
+    margin-bottom: 4px
+
+  .new-price
+    display: flex
+    align-items: baseline
+    gap: 6px
+    margin-bottom: 12px
+
+    .amount
+      font-size: 22px
+      font-weight: 800
+      color: #141937
+
+    .suffix
+      color: #3b4150
+      font-weight: 600
+
+  .divider
+    border: 0
+    border-top: 1px solid var(--clr-border)
+    margin: 10px 0 12px
+
+/* Bullets */
+.plan-features
+  list-style: none
+  padding-left: 0
+  margin: 0 0 16px 0
+  display: grid
+  gap: 10px
+  color: #2c3344
+
+  li
+    position: relative
+    padding-left: 18px
+    line-height: 1.45
+
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 8px
+      width: 6px
+      height: 6px
+      background: #2c3344
+      border-radius: 50%
+
+/* CTA abajo para alinear entre cards */
+.btn-cta
+  margin-top: auto
+  border: 0
+  background: #ff2d55
+  color: #fff
+  font-weight: 800
+  border-radius: 999px
+  padding: 14px 16px
+  width: 100%
+  cursor: pointer
+  transition: filter .15s ease, transform .05s ease
+
+  &:hover
+    filter: brightness(1.03)
+  &:active
+    transform: translateY(1px)
+
+/* Responsivo: 100% de ancho en móviles estrechos */
+@media (max-width: 380px)
+  .plan-card
+    width: 100%
